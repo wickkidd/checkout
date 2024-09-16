@@ -2284,6 +2284,7 @@ class RetryHelper {
                     return yield action();
                 }
                 catch (err) {
+                    core.info(`Error: ${err}`);
                     core.info(err === null || err === void 0 ? void 0 : err.message);
                 }
                 // Sleep

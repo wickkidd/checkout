@@ -29,6 +29,7 @@ export class RetryHelper {
       try {
         return await action()
       } catch (err) {
+        core.info(`Error: ${err}`)
         core.info((err as any)?.message)
       }
 
